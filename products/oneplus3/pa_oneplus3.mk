@@ -27,6 +27,8 @@ $(call inherit-product, vendor/pa/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 
+TARGET_DISABLES_GAPPS := true
+
 # Override the AOSP build properties.
 PRODUCT_NAME := pa_oneplus3
 PRODUCT_DEVICE := oneplus3
