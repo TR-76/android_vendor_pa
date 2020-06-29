@@ -70,8 +70,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 ifeq ($(TARGET_DISABLES_GAPPS), true)
 PRODUCT_PACKAGES += \
-    MarkupGoogle \
-    MatchmakerPrebuilt
+    MarkupGoogle
 endif
 
 # Overlays
