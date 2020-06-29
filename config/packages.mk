@@ -81,9 +81,6 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor \
     libqti_vndfwk_detect.vendor
 
-# Retro Music Player
-PRODUCT_PACKAGES += RetroMusicPlayer
-
 # Tools - FS
 PRODUCT_PACKAGES += \
     fsck.exfat \
