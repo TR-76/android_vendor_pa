@@ -88,10 +88,6 @@ PRODUCT_PACKAGES += \
 # Retro Music Player
 PRODUCT_PACKAGES += RetroMusicPlayer
 
-# Snapdragon Apps
-PRODUCT_PACKAGES += \
-    SnapdragonGallery
-
 # Tools - FS
 PRODUCT_PACKAGES += \
     fsck.exfat \
