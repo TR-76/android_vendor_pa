@@ -23,6 +23,10 @@ PRODUCT_PACKAGES += \
     adb_root
 endif
 
+# Android Beam
+PRODUCT_COPY_FILES += \
+    vendor/pa/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
+
 # ART
 # Optimize everything for preopt
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
@@ -39,6 +43,10 @@ PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
     vendor/pa/prebuilt/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
+
+# Bluetooth
+# Disable AAC whitelist
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.bt.a2dp.aac_whitelist=false
 
 # Boot Animation
 ifneq ($(TARGET_BOOT_ANIMATION_RES),)
@@ -106,7 +114,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Properties
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-BUILD_FINGERPRINT ?= google/coral/coral:10/QQ3A.200605.001/6392402:user/release-keys
+BUILD_FINGERPRINT ?= google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     keyguard.no_require_sim=true \
